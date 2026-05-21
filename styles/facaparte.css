@@ -1,0 +1,173 @@
+@import "global.css";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff3cd; /* amarelo claro */
+  color: #333;
+}
+
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+
+
+.btn-voltar {
+  display:flexbox;
+  margin: 10px 0 20px;
+  padding: 8px 16px;
+  background: #d32f2f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+}
+.btn-voltar:hover {
+  background: #b71c1c;
+}
+
+.info {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.info h3 {
+  margin-top: 0;
+  color: #d32f2f;
+  line-height: 100px
+}
+
+.form-apadrinhamento {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form-apadrinhamento input,
+.form-apadrinhamento textarea,
+.form-apadrinhamento select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-enviar {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-enviar:hover {
+  background: darkorange;
+}
+
+.footer {
+  background: #ffc933;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+
+.pagamento, .valores {
+  margin: 10px 0;
+}
+
+.valores input[type="number"] {
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 150px;
+}
+
+
+/* RESPONSIVO — APADRINHAMENTO */
+@media (max-width: 768px) {
+
+  /* CONTAINER */
+  .container {
+    width: 95%;
+    padding: 0 12px;
+  }
+
+  .container-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* BOTÃO VOLTAR */
+  .btn-voltar {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px 0 15px;
+    border-radius: 8px;
+  }
+
+  /* INFO */
+  .info {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .info h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  /* FORMULÁRIO */
+  .form-apadrinhamento {
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .form-apadrinhamento input,
+  .form-apadrinhamento textarea,
+  .form-apadrinhamento select {
+    font-size: 16px; /* evita zoom automático no iOS */
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  /* BOTÃO ENVIAR */
+  .btn-enviar {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  /* PAGAMENTO / VALORES */
+  .pagamento,
+  .valores {
+    margin: 8px 0;
+  }
+
+  .valores input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px 15px;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}

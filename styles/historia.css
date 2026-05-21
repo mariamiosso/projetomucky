@@ -1,0 +1,188 @@
+ @import "global.css";
+ :root {
+      --amarelo: #f4b400;
+      --vermelho: #8B0000;
+      --preto: #3a2517;
+      --branco: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: var(--offwhite);
+      color: black;
+      line-height: 1.6;
+    }
+
+    
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: var(--vermelho);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--vermelho);
+      margin-top: 30px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    /* IMAGEM */
+    .imagem {
+      width: 100%;
+      border-radius: 15px;
+      margin: 20px 0;
+      
+    }
+
+    
+    .box {
+      background: #ffc933;
+      padding: 20px;
+      border-left: 5px solid var(--vermelho);
+      border-radius: 10px;
+      margin: 20px 0;
+      color:black
+    }
+
+    .box p{
+      color: #000;
+    }
+
+    /* BOTÃO VOLTAR */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background:var(--amarelo);
+      color: var(--vermelho);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    .footer {
+  background: #ffc933;          /* cor de fundo amarela */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid var(--vermelho);
+  border-radius: 10px;
+  margin-top: 30px;
+  color: black;                 /* cor do texto */
+  font-family: Arial, sans-serif;
+}
+
+.footer-left {
+  display: flex;          /* coloca logo e texto lado a lado */
+  align-items: center;    /* alinha verticalmente */
+  gap: 15px;              /* espaço entre logo e texto */
+}
+
+.footer-left .logo_rodape {
+  height: 50px;
+}
+
+.modal {
+  display: none; /* escondido por padrão */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #ffc933;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  color: black;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.logos img {
+  height: 50px;
+}
+
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-btn {
+  background-color: var(--vermelho); /* cor de fundo */
+  color: white;                      /* cor do texto */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: #b30000; /* cor mais escura no hover */
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  
