@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa História - Projeto Mucky</title>
+  <link rel="stylesheet" href="../styles/historia.css">
+  <link rel="stylesheet" href="../styles/modais.css">
+  
+</head>
+
+<body>
+
+<header class="header-modificado">
+  <nav class="menu">
+    <img src="../assets/macaco.png" class="logo" alt="Logo Projeto Mucky">
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="historia.html">Nossa história</a></li>
+      <li><a href="ajudar.html">Faça parte</a></li>
+      <li><a href="facaparte.html">Apadrinhar</a></li>
+
+    </ul>
+  </nav>
+
+ 
+</header>
+
+<div class="container">
+
+  <h1>Como tudo começou</h1>
+
+  <p>
+    A história do Projeto Mucky teve início em 1985, quando a produtora gráfica e educadora física Lívia Botár,
+    hoje ambientalista e coordenadora da Instituição, resgatou e acolheu o sagui Mucky, que sofria graves maus-tratos.
+    Nos anos seguintes, após muitas pesquisas e intercâmbio com especialistas, Lívia desenvolveu uma metodologia única
+    de cuidados aos primatas, resgatando e abrigando centenas de outros “Muckys”.
+  </p>
+
+  <img src="../assets/historia.png" alt="História do projeto" class="imagem">
+
+  <div class="box">
+    <p>
+      Este foi o primeiro sagui resgatado. No início, resgatávamos animais com recursos próprios e apoio de voluntários.
+      Com o tempo, o projeto cresceu e conseguimos alcançar mais pessoas que compartilham do mesmo amor pelos animais.
+    </p>
+  </div>
+
+  <h2>O crescimento do projeto</h2>
+
+  <p>
+    Hoje, o Mucky atua em diferentes frentes: resgate, cuidados veterinários, adoção responsável e conscientização.
+    Cada vida salva representa uma nova história de esperança.
+  </p>
+
+  <div class="box">
+    <p>
+     “Nunca duvide da capacidade de um pequeno grupo de dedicados cidadãos para mudar os rumos do Planeta.
+     Na verdade, eles são a única esperança de que isso possa ocorrer.” (Margaret Mead)
+    </p>
+  </div>
+
+  <h2>Nosso futuro</h2>
+
+  <p>
+    Queremos expandir ainda mais nosso alcance, criar mais campanhas e salvar cada vez mais vidas.
+    E isso só é possível com o apoio de pessoas como você.
+  </p>
+
+  
+
+</div>
+
+<footer class="footer">
+  <div class="footer-left">
+    <img src="../assets/logo_rodape.png" alt="Projeto Mucky logo rodapé" class="logo_rodape">
+    <p>Associação Mucky de Proteção aos Primatas<br>
+      Rodovia Hilário Ferrari - Itu/SP<br>
+      CNPJ: 01.943.493.0001-66
+    </p>
+  </div>
+
+  <div class="footer-right">
+    <button class="footer-btn" onclick="abrirModal()">Nossos parceiros</button>
+    <button class="footer-btn" onclick="abrirContato()">Contato</button>
+  </div>
+
+  <!-- Modal de parceiros -->
+  <div id="modal-parceiros" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h2>NOSSOS PARCEIROS</h2>
+      <p>
+        As empresas e entidades listadas acreditam na importância do trabalho do Projeto Mucky
+        e apoiam a causa de recuperação e dignidade de cerca de 200 primatas acolhidos.
+        Junte-se a nós clicando <a href="#" onclick="abrirForm()">Clique aqui</a>.
+      </p>
+      <div class="logos">
+        <img src="../assets/fundacaobnp.png" alt="Parceiro 1">
+        <img src="../assets/parceiro2.png" alt="Parceiro 2">
+        <img src="../assets/parceiro3.png" alt="Parceiro 3">
+        <img src="../assets/parceiro4.png" alt="Parceiro 4">
+        <img src="../assets/parceiro5.png" alt="Parceiro 5">
+        <img src="../assets/parceiro6.png" alt="Parceiro 6">
+        <img src="../assets/parceiro7.png" alt="Parceiro 7">
+        <img src="../assets/parceiro8.png" alt="Parceiro 8">
+        <img src="../assets/parceiro9.png" alt="Parceiro 9">
+        <img src="../assets/parceiro10.png" alt="Parceiro 10">
+        <img src="../assets/parceiro11.png" alt="Parceiro 11">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do formulário -->
+  <div id="modal-form" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharForm()">&times;</span>
+      <h2>SEJA UMA EMPRESA PARCEIRA</h2>
+      <p>
+        Ser parceiro do Projeto Mucky é uma oportunidade de exercer a responsabilidade socioambiental corporativa
+        e inspirar colaboradores a engajar-se em ações de proteção ao meio ambiente.
+      </p>
+      <p>
+        Quer fazer uma parceria com nossa Instituição? Preencha o formulário abaixo e entraremos em contato.
+      </p>
+      <form id="parceirosForm">
+
+        <label>Nome da empresa</label>
+        <input 
+          type="text"
+          name="empresa"
+          required
+        >
+        
+        <label>Responsável</label>
+        <input 
+          type="text"
+          name="responsavel"
+          required
+        >
+
+        <label>Cidade/Estado</label>
+        <input 
+          type="text"
+          name="cidade"
+        >
+
+        <label>Celular (com DDD)</label>
+        <input 
+          type="tel"
+          name="celular"
+        >
+
+        <label>E-mail</label>
+        <input 
+          type="email"
+          name="email"
+          required
+        >
+
+        <label>Mensagem</label>
+        <textarea 
+          name="mensagem"
+          rows="4"
+        ></textarea>
+
+        <button type="submit" class="enviar-btn">Enviar</button>
+      </form>
+      
+    </div>
+  </div>
+
+  <div id="modal-contato" class="modal">
+  <div class="modal-content">
+    <span class="fechar" onclick="fecharContato()">&times;</span>
+    <h2>Contato</h2>
+    <p><strong>AVISO IMPORTANTE:</strong><br>
+      O Projeto Mucky <strong>NÃO</strong> é aberto à visitação pública, por favor, não insista.<br>
+      Recebemos somente os padrinhos e madrinhas dos primatas, mediante agendamento prévio.<br>
+      <a href="../projetomuncky.atualizado/pages/ajudar.html">Clique aqui</a> e faça parte da nossa rede de apoiadores.
+    </p>
+    <p>Caso deseje falar sobre outro assunto, preencha os campos abaixo:</p>
+
+    <form id="contatoForm">
+
+  <label>Nome completo</label>
+  <input 
+    type="text"
+    name="nome"
+    required
+  >
+
+  <label>Idade</label>
+  <input 
+    type="number"
+    name="idade"
+    required
+  >
+
+  <label>E-mail</label>
+  <input 
+    type="email"
+    name="email"
+    required
+  >
+
+  <label>Cidade</label>
+  <input 
+    type="text"
+    name="cidade"
+  >
+
+  <label>Estado</label>
+  <select name="estado">
+
+    <option value="">- Selecione -</option>
+
+    <option>SP</option>
+    <option>RJ</option>
+    <option>MG</option>
+
+  </select>
+
+  <label>Telefone (com DDD)</label>
+  <input 
+    type="tel"
+    name="telefone"
+  >
+
+  <label>Mensagem</label>
+  <textarea 
+    name="mensagem"
+    rows="4"
+  ></textarea>
+
+  <button 
+    type="submit"
+    class="enviar-btn"
+  >
+    Enviar
+  </button>
+
+</form>
+  </div>
+</div>
+</footer>
+
+<script src="../script/historia.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="../script/novosParceiros.js"></script>
+<script src="../script/novosContatos.js"></script>
+</body>
+</html>
