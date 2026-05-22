@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Projeto Mucky</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Projeto Mucky - Protegendo primatas brasileiros há mais de 40 anos">
+
+<link rel="icon" href="macaco.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/modais.css">
+</head>
+
+<body>
+
+<header class="banner">
+  <nav class="menu">
+    <img src="assets/macaco.png" class="logo" alt="Logo Projeto Mucky">
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/historia.html">Nossa história</a></li>
+      <li><a href="pages/ajudar.html">Faça parte</a></li>
+      <li><a href="pages/facaparte.html">Apadrinhar</a></li>
+
+    </ul>
+  </nav>
+
+  <div class="overlay-box">
+    <img src="assets/titulo.png" class="titulo-img" alt="Projeto Mucky 40 anos">
+  </div>
+</header>
+
+<section class="hero">
+  <h6 class="hero-titulo">Salvando primatas </h6>
+  <section class="hero-box">
+    <h3 class="hero-box-titulo">História e Preservação</h3>
+    <div class="hero-box-item">
+      <p class="hero-box-item-texto">O Projeto Mucky é uma organização brasileira criada em 1985 para proteger os primatas da Mata Atlântica e preservar a biodiversidade. Localizado em São Francisco Xavier, o projeto realiza pesquisas e ações de conservação para proteger espécies ameaçadas, como o muriqui e o sagui-da-serra-escuro.</p>
+      <img class="hero-box-item-img" src="assets/ultrassom.png" alt="A imagem mostra uma família realizando o plantio de uma muda de árvore em uma área de floresta. Um homem, uma mulher e uma criança estão ajoelhados no chão, trabalhando juntos no plantio da muda, demonstrando cuidado com a natureza e preservação ambiental. O ambiente é cercado por vegetação verde, transmitindo uma sensação de contato com a Mata Atlântica e conscientização ecológica. A cena representa ações de reflorestamento, sustentabilidade e união familiar em prol do meio ambiente.">
+    </div>
+  </section>
+  <section class="hero">
+    <h3 class="hero-box-titulo">Ações e Conservação Ambiental</h3>
+        <div class=" hero-box-item">
+      <img class="hero-box-item-img" src="assets/pessoasnomato.png" alt="A imagem mostra uma família realizando o plantio de uma muda de árvore em uma área de floresta. Um homem, uma mulher e uma criança estão ajoelhados no chão, trabalhando juntos no plantio da muda, demonstrando cuidado com a natureza e preservação ambiental. O ambiente é cercado por vegetação verde, transmitindo uma sensação de contato com a Mata Atlântica e conscientização ecológica. A cena representa ações de reflorestamento, sustentabilidade e união familiar em prol do meio ambiente.">
+      <p class="hero-box-item-texto">Além das pesquisas, o Projeto Mucky realiza resgate e recuperação de animais silvestres, combate o tráfico ilegal e promove educação ambiental. O projeto também desenvolve ações de reflorestamento, ajudando na preservação da Mata Atlântica e na proteção da fauna brasileira.</p>
+    </div>
+  </section>
+  
+</section>
+
+<section class="impact">
+  <div><h3>Quero apoiar essa causa!</h3><p>Conheça alguns primatas da Instituição que serão beneficiados com a sua ajuda:</p></div>
+</section>
+
+<section class="carousel">
+  <img src="assets/macaco7.png" alt="Primata 1">
+  <img src="assets/macaco8.jpg" alt="Primata 2">
+  <img src="assets/macaco9.png" alt="Primata 3">
+  <img src="assets/macaco10.png" alt="Primata 4">
+  <img src="assets/macaco11.png" alt="Primata 5">
+  <img src="assets/macaco12.png" alt="Primata 6">
+  <img src="assets/macaco13.png" alt="Primata 7">
+  <img src="assets/macaco14.png" alt="Primata 8">
+  <img src="assets/pessoas1.png" alt="Pessoas">
+</section>
+
+<section class="cta">
+  <h2>Você pode fazer a diferença</h2>
+  <a class="cta-link" href="pages/ajudar.html" >Quero ajudar</a>
+</section>
+
+<section class="button-chat" onclick="showChat()">
+  <i class="bi bi-wechat button-chat-icon"></i>
+</section>
+<!-- CHAT -->
+<div id="chatbot">
+  <div class="chat-header"> 
+    <p class="chat-header-text">Ajuda online</p>
+    <i class="bi bi-x chat-header-icone" onclick="showChat()"></i>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div id="messages" class="messages"></div>
+
+    <div class="chat-input-area">
+      <input id="input" placeholder="Digite sua mensagem..." onkeydown="enviar(event)">
+      <button onclick="enviar({key:'Enter'})">➤</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-left">
+    <img src="assets/logo_rodape.png" alt="Projeto Mucky logo rodapé" class="logo_rodape">
+    <p>Associação Mucky de Proteção aos Primatas<br>
+      Rodovia Hilário Ferrari - Itu/SP<br>
+      CNPJ: 01.943.493.0001-66
+    </p>
+  </div>
+
+  <div class="footer-right">
+    <button class="footer-btn" onclick="abrirModal()">Nossos parceiros</button>
+    <button class="footer-btn" onclick="abrirContato()">Contato</button>
+  </div>
+
+  <!-- Modal de parceiros -->
+  <div id="modal-parceiros" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h2>NOSSOS PARCEIROS</h2>
+      <p>
+        As empresas e entidades listadas acreditam na importância do trabalho do Projeto Mucky
+        e apoiam a causa de recuperação e dignidade de cerca de 200 primatas acolhidos.
+        Junte-se a nós clicando <a href="#" onclick="abrirForm()">Clique aqui</a>.
+      </p>
+      <div class="logos">
+        <img src="../assets/fundacaobnp.png" alt="Parceiro 1">
+        <img src="../assets/parceiro2.png" alt="Parceiro 2">
+        <img src="../assets/parceiro3.png" alt="Parceiro 3">
+        <img src="../assets/parceiro4.png" alt="Parceiro 4">
+        <img src="../assets/parceiro5.png" alt="Parceiro 5">
+        <img src="../assets/parceiro6.png" alt="Parceiro 6">
+        <img src="../assets/parceiro7.png" alt="Parceiro 7">
+        <img src="../assets/parceiro8.png" alt="Parceiro 8">
+        <img src="../assets/parceiro9.png" alt="Parceiro 9">
+        <img src="../assets/parceiro10.png" alt="Parceiro 10">
+        <img src="../assets/parceiro11.png" alt="Parceiro 11">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do formulário -->
+  <div id="modal-form" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharForm()">&times;</span>
+      <h2>SEJA UMA EMPRESA PARCEIRA</h2>
+      <p>
+        Ser parceiro do Projeto Mucky é uma oportunidade de exercer a responsabilidade socioambiental corporativa
+        e inspirar colaboradores a engajar-se em ações de proteção ao meio ambiente.
+      </p>
+      <p>
+        Quer fazer uma parceria com nossa Instituição? Preencha o formulário abaixo e entraremos em contato.
+      </p>
+      <form id="parceirosForm">
+
+        <label>Nome da empresa</label>
+        <input 
+          type="text"
+          name="empresa"
+          required
+        >
+        
+        <label>Responsável</label>
+        <input 
+          type="text"
+          name="responsavel"
+          required
+        >
+
+        <label>Cidade/Estado</label>
+        <input 
+          type="text"
+          name="cidade"
+        >
+
+        <label>Celular (com DDD)</label>
+        <input 
+          type="tel"
+          name="celular"
+        >
+
+        <label>E-mail</label>
+        <input 
+          type="email"
+          name="email"
+          required
+        >
+
+        <label>Mensagem</label>
+        <textarea 
+          name="mensagem"
+          rows="4"
+        ></textarea>
+
+        <button type="submit" class="enviar-btn">Enviar</button>
+      </form>
+      
+    </div>
+  </div>
+
+  <div id="modal-contato" class="modal">
+  <div class="modal-content">
+    <span class="fechar" onclick="fecharContato()">&times;</span>
+    <h2>Contato</h2>
+    <p><strong>AVISO IMPORTANTE:</strong><br>
+      O Projeto Mucky <strong>NÃO</strong> é aberto à visitação pública, por favor, não insista.<br>
+      Recebemos somente os padrinhos e madrinhas dos primatas, mediante agendamento prévio.<br>
+      <a href="../projetomuncky.atualizado/pages/ajudar.html">Clique aqui</a> e faça parte da nossa rede de apoiadores.
+    </p>
+    <p>Caso deseje falar sobre outro assunto, preencha os campos abaixo:</p>
+
+    <form id="contatoForm">
+
+  <label>Nome completo</label>
+  <input 
+    type="text"
+    name="nome"
+    required
+  >
+
+  <label>Idade</label>
+  <input 
+    type="number"
+    name="idade"
+    required
+  >
+
+  <label>E-mail</label>
+  <input 
+    type="email"
+    name="email"
+    required
+  >
+
+  <label>Cidade</label>
+  <input 
+    type="text"
+    name="cidade"
+  >
+
+  <label>Estado</label>
+  <select name="estado">
+
+    <option value="">- Selecione -</option>
+
+    <option>SP</option>
+    <option>RJ</option>
+    <option>MG</option>
+
+  </select>
+
+  <label>Telefone (com DDD)</label>
+  <input 
+    type="tel"
+    name="telefone"
+  >
+
+  <label>Mensagem</label>
+  <textarea 
+    name="mensagem"
+    rows="4"
+  ></textarea>
+
+  <button 
+    type="submit"
+    class="enviar-btn"
+  >
+    Enviar
+  </button>
+
+</form>
+  </div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script/script.js"></script>
+<script src="script/historia.js"></script>
+<script src="script/ajudar.js"></script>
+<script src="script/novosPadrinhos.js"></script>
+<script src="script/novosParceiros.js"></script>
+<script src="script/novosContatos.js"></script>
+
+
+<script>
+
+
+
+function irParaAjuda() {
+  window.location.href = "pages/ajudar.html";
+}
+
+</script>
+
+</body>
+</html>
